@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% block title %} Reset Password Page {% endblock %}
+{% block content %}
+<h1 class="mb-10 text-5xl" > Reset Password Page </h1>
+<br>
+<div class="w-1/2" >
+<form method="POST" align="left" class="bg-white rounded px-8 pt-6 pb-8 mb-4" >
+{% csrf_token %}
+<p class="block text-gray-500 font-bold mb-1 md:mb-0 pr-4"> Enter registered Username: <input class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-2 ml-4" type="text" name="un" placeholder="enter reg username" required></p>
+
+<p class="block text-gray-500 font-bold mb-1 md:mb-0 pr-4"> Enter registered E-mail: <input class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-2 ml-11" type="email" name="em" placeholder="enter reg email address" required></p>
+<br>
+<input class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-8" type="submit" value="Reset Password">
+<br>
+</form>
+</div>
+{{ msg }}
+
+{% endblock %}
